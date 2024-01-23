@@ -28,13 +28,13 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // | N/A | TAB |  A  |  A  |  A  |  A  |   |  1  |  2  |  3  | +(-)| £($)| N/A |
-// | N/A |  A  |  A  |  A  |  A  |  A  |   |  4  |  5  |  6  | %(=)| *(^)| N/A |
-// | N/A |  A  |  A  |  A  |  A  |  A  |   |  7  |  8  |  9  | <(>)| /(\)| N/A |
+// | N/A | ESC |  ;  |  :  |  !  |  ?  |   |  4  |  5  |  6  | %(=)| *(^)| N/A |
+// | N/A | SHFT|  A  |  A  |  A  |  A  |   |  7  |  8  |  9  | <(>)| /(\)| N/A |
 //                    | GUI |     | SPC |   | ENT |  0  | ALT |
                         bindings = <
-   &kp A &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N1 &kp N2 &kp N3 &modmorph(PLUS, LSHIFT, MINUS) &modmorph(AAA, LSHIFT, AAA) PRCNT &kp A
-   &kp A &kp N1 &kp N2 &kp N3 &kp N1 &kp N2    &kp N4 &kp N5 &kp N6 &modmorph(PRCNT, LSHIFT, EQUAL) &modmorph(ASTRK, LSHIFT, CARET) &kp A
-   &kp A &kp N2 &kp N3 &kp N1 &kp N2 &kp N3    &kp N7 &kp N8 &kp N9 &modmorph(LT, LSHIFT, GT) &modmorph(FSLH, LSHIFT, BSLH) &kp A
+   &kp A &kp TAB &kp A &kp A &kp A &kp A    &kp N1 &kp N2 &kp N3 &modmorph(PLUS, LSHIFT, MINUS) &modmorph(AAA, LSHIFT, AAA) PRCNT &kp A
+   &kp A &kp ESC &kp SEMI &kp COLON &kp EXCL &kp QMARK    &kp N4 &kp N5 &kp N6 &modmorph(PRCNT, LSHIFT, EQUAL) &modmorph(ASTRK, LSHIFT, CARET) &kp A
+   &kp A &kp LSHFT &kp A &kp A &kp A &kp A    &kp N7 &kp N8 &kp N9 &modmorph(LT, LSHIFT, GT) &modmorph(FSLH, LSHIFT, BSLH) &kp A
         &kp LGUI     &trans       &kp SPACE    &kp RET &kp N0 &kp RALT
                         >;
                 };
