@@ -180,9 +180,9 @@ include <dt-bindings/zmk/bt.h>
 // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR | SPC |  | BKSP | DEF | ENT |
                         bindings = <
-   &kp A &kp A &kp A &kp UP &kp A &kp A    &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE &kp C_BRI_UP &kp C_BRI_DN &kp A
-   &kp A &kp A &kp RIGHT &kp DOWN &kp LEFT &kp A   &kp K_SCROLL_UP &kp K_SCROLL_DOWN A &kp K_FIND &kp PSCN &kp A &kp A
-   &kp A &kp A &kp A &kp A &kp A &kp A    &kp N7 &kp N8 &kp N9 &kp EQUAL &kp LT &kp A
+   &kp A &kp A &kp A &kp UP &kp A &kp A            &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE &kp C_BRI_UP &kp C_BRI_DN &kp A
+   &kp A &kp A &kp LEFT &kp DOWN &kp RIGHT &kp A   &kp K_SCROLL_UP &kp K_SCROLL_DOWN A &kp K_FIND &kp PSCN &kp A &kp A
+   &kp A &kp A &kp A &kp A &kp A &kp A                &kp N7 &kp N8 &kp N9 &kp EQUAL &kp LT &kp A
           &kp LCTRL &mo 1 &kp SPACE   &kp BSPC &mo 2 &kp RET
                         >;
                 };
