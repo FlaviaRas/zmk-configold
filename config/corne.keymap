@@ -34,7 +34,7 @@
         dotqt: dot_quotation {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp DQT>;
+            bindings = <&kp DOT>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
@@ -103,7 +103,8 @@
    &none &comsqt &dotqt &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &kp DEL  &none
    &none &kp A &kp O &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
    &none &kp LSHFT &kp Q &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
-   &kp LCTRL &mo 1 &kp SPACE &kp BSPC &mo 2 &kp RET
+   &kp LCTRL &tog 1 &kp SPACE &kp BSPC &tog 2 &kp RET
+ 
                         >;
                 };
                 lower_layer {
@@ -113,7 +114,7 @@
 // | N/A | SHFT| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  | =(^)| /(\)| N/A |
 //                    | CTRL | DEF | SPC |  | BKSP | RSE  | 0 |
                         bindings = <
-   &trans &kp TAB &kp HASH &kp AMPS &kp TILDE &kp AT &kp N1 &kp N2 &kp N3 &plusmin &trans &trans
+   &trans &kp TAB &kp HASH &kp AMPS &kp TILDE &kp DQT &kp N1 &kp N2 &kp N3 &plusmin &kp HASH &trans
    &trans &kp ESC &kp SEMI &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
    &trans &kp LSHFT &lines &brace &square &brackets &kp N7 &kp N8 &kp N9 &equalhat &slash  &trans
    &trans &trans &trans &trans &trans &kp N0
