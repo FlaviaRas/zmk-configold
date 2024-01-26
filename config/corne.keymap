@@ -114,7 +114,7 @@
 // | N/A | SHFT| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  | =(^)| /(\)| N/A |
 //                    | CTRL | DEF | SPC |  | BKSP | RSE  | 0 |
                         bindings = <
-   &trans &kp TAB &kp HASH &kp AMPS &kp TILDE &kp DQT &kp N1 &kp N2 &kp N3 &plusmin &kp HASH &trans
+   &trans &kp TAB &kp HASH &kp AMPS &kp PIPE &kp DQT &kp N1 &kp N2 &kp N3 &plusmin &kp HASH &trans
    &trans &kp ESC &kp SEMI &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
    &trans &kp LSHFT &lines &brace &square &brackets &kp N7 &kp N8 &kp N9 &equalhat &slash  &trans
    &trans &trans &trans &trans &trans &kp N0
