@@ -128,8 +128,8 @@
 //                    | CTRL | LWR | SPC |  | BKSP | DEF | ENT |
                         bindings = <
    &trans &trans &trans &kp UP  &trans &trans &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE &kp C_BRI_UP &kp C_BRI_DN &trans
-   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &kp K_SCROLL_UP &kp K_SCROLL_DOWN &kp K_FIND &kp PSCN &trans &trans
-   &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
                 };
