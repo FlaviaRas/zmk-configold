@@ -98,12 +98,12 @@
 // | N/A | ,(')| .(")|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | DEL | N/A |
 // | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
 // | N/A | SHFT|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
-//                    | CTRL | LWR | SPC |  | BKSP | RSE  | ENT |
+//                    | CTRL | SPC | LWR |  | RSE | BKSP  | ENT |
                         bindings = <
    &none &comsqt &dotqt &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &kp DEL  &none
    &none &kp A &kp O &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
    &none &kp LSHFT &kp Q &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
-   &kp LCTRL &tog 1 &kp SPACE &kp BSPC &tog 2 &kp RET
+   &kp LCTRL &kp SPACE &tog 1 &tog 2 &kp BSPC &kp RET
  
                         >;
                 };
@@ -112,7 +112,7 @@
 // | N/A | TAB |  #  |  &  |  ~  |  @  |      |  1  |  2  |  3  | +(-)| £($)| N/A |
 // | N/A | ESC |  ;  |  :  |  !  |  ?  |      |  4  |  5  |  6  | %(*)| <(>)| N/A |
 // | N/A | SHFT| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  | =(^)| /(\)| N/A |
-//                    | CTRL | DEF | SPC |  | BKSP | RSE  | 0 |
+//                    | CTRL | SPC | LWR |  | RSE | BKSP  | 0 |
                         bindings = <
    &trans &kp TAB &kp HASH &kp AMPS &kp PIPE &kp DQT &kp N1 &kp N2 &kp N3 &plusmin &kp HASH &trans
    &trans &kp ESC &kp SEMI &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
@@ -126,9 +126,9 @@
 // | N/A |     |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |  B+ |  B- | N/A |
 // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  S⬆ |  S⬇ | FIND| PSCN|     | N/A |
 // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
-//                    | CTRL | LWR | SPC |  | BKSP | DEF | ENT |
+//                    | CTRL | SPC | LWR |  | RSE | BKSP  | ENT |
                         bindings = <
-   &trans &trans &trans &kp UP  &trans &trans &kp K_VOL_UP &kp K_VOL_DN &kp K_MUTE &kp C_BRI_UP &kp C_BRI_DN &trans
+   &trans &trans &trans &kp UP  &trans &trans &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_BRI_UP &kp C_BRI_DN &trans
    &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
