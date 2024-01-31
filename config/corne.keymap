@@ -41,7 +41,7 @@
         lines: underscore_pipe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp UNDER>, <&kp PIPE>;
+            bindings = <&kp UNDER>, <&kp PIPE2>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
@@ -144,13 +144,13 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | N/A |     |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |  B+ |  B- | N/A |
-// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  S⬆ |  S⬇ | FIND| PSCN|     | N/A |
+// | N/A |     |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN Q~_~ N/A |
+// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  S⬆ |  S⬇ | FIND| B+  | B-  | N/A |
 // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
                         bindings = <
-   &trans &trans &trans &kp UP  &trans &trans &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp C_BRI_UP &kp C_BRI_DN &trans
-   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &kp UP  &trans &trans &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans 
+   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans   &trans &trans &trans &kp C_BRI_UP &kp C_BRI_DN &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
