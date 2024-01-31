@@ -105,21 +105,21 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp CAPS>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
             }; 
 
    A copy: a_copy {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp A>, <&kp CAPS>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
             };
 
    uppies: shift_caps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
             };
 
         };
