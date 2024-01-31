@@ -111,14 +111,14 @@
    A copy: a_copy {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&kp CAPS>;
+            bindings = <&kp A>, <&kp K_COPY>;
             mods = <(MOD_LCTL)>;
             };
 
-   uppies: shift_caps {
+   O paste: o_paste {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
+            bindings = <&kp O>, <&kp K_PASTE>;
             mods = <(MOD_LCTL)>;
             };
 
