@@ -106,6 +106,20 @@
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp CAPS>;
             mods = <(MOD_LCTRL)>;
+            }; 
+
+   A copy: a_copy {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp CAPS>;
+            mods = <(MOD_LCTRL)>;
+            };
+
+   uppies: shift_caps {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
+            mods = <(MOD_LCTRL)>;
             };
 
         };
@@ -144,8 +158,8 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | N/A |     |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN Q~_~ N/A |
-// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  S⬆ |  S⬇ | FIND| B+  | B-  | N/A |
+// | N/A |     |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | N/A |
+// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  S⬆ |  S⬇ | FIND|  B+ |  B- | N/A |
 // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
                         bindings = <
