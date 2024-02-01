@@ -111,14 +111,14 @@
    acop: a_copy {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&kp K_COPY>;
+            bindings = <&kp A>, <&kp C_AC_COPY>;
             mods = <(MOD_LCTL)>;
             };
 
    opa: o_paste {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp O>, <&kp K_PASTE>;
+            bindings = <&kp O>, <&kp C_AC_PASTE>;
             mods = <(MOD_LCTL)>;
             };
 
@@ -138,7 +138,7 @@
    &none &comsqt &dotqt &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &tabec &none
    &none &acop &opa &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
    &none &uppies &kp Q &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
-   &kp LCTRL &tog 1 &kp SPACE &backs &tog 2 &kp RET
+   &kp LCTRL &mo 1 &kp SPACE &backs &tog 2 &kp RET
  
                         >;
                 };
@@ -163,8 +163,8 @@
 // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
                         bindings = <
-   &trans &trans &trans &kp UP  &trans &trans &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans 
-   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans   &trans &trans &trans &kp C_BRI_UP &kp C_BRI_DN &trans
+   &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
+   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &kp C_AC_SCROLL_UP  &kp C_AC_SCROLL_DOWN &trans &kp C_BRI_UP &kp C_BRI_DN &trans
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
