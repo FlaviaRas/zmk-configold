@@ -9,8 +9,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: mouseemulation
-      url: https://github.com/ftc/
+    - name: zmk
+      remote: zmkfirmware
       revision: mouse-ftc
+      url: https://github.com/ftc/
   self:
     path: config
