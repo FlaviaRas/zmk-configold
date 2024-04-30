@@ -71,6 +71,13 @@
             #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp MINUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            };  
+
+        plusmin: plus_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
         prcntastk: percent_asterisk {
@@ -150,7 +157,7 @@
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
                         bindings = <
    &trans &trans &kp HASH &kp AMPS &kp PIPE &kp DQT &kp N1 &kp N2 &kp N3 &plusmin &trans &trans
-   &trans &comsqt &kp SEMI &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
+   &trans &comsqt &kp SINGLE_QUOTE &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
    &trans &uppies &lines &brace &square &brackets &kp N7 &kp N8 &kp N9 &equalhat &slash  &trans
    &trans &trans &trans &trans &trans &kp N0
                         >;
@@ -165,7 +172,7 @@
                         bindings = <
    &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
    &trans &tabec &kp LEFT &kp DOWN &kp RIGHT &trans  &kp C_AC_SCROLL_UP  &kp C_AC_SCROLL_DOWN &trans &kp C_BRI_UP &kp C_BRI_DN &trans
-   &trans &kp K_COPY &kp K_PASTE &kp K_UNDO &kp K_REDO &trans   &trans &trans &trans &trans &trans &trans &trans
+   &trans &kp LG(C) &kp LG(V) &kp LG(Z) &kp LG(Y) &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
                 };
