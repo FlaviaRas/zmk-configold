@@ -172,7 +172,7 @@
                         bindings = <
    &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
    &trans &tabec &kp LEFT &kp DOWN &kp RIGHT &trans  &kp C_AC_SCROLL_UP  &kp C_AC_SCROLL_DOWN &trans &kp C_BRI_UP &kp C_BRI_DN &trans
-   &trans &kp LG(C) &kp LG(V) &kp LG(Z) &kp LG(Y) &trans   &trans &trans &trans &trans &trans &trans &trans
+   &trans &kp LC(C) &kp LC(V) &kp LC(Z) &kp LC(Y) &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
                 };
