@@ -165,7 +165,7 @@
                         bindings = <
    &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
    &trans &tabec &kp LEFT &kp DOWN &kp RIGHT &trans  &kp C_AC_SCROLL_UP  &kp C_AC_SCROLL_DOWN &trans &kp C_BRI_UP &kp C_BRI_DN &trans
-   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans
+   &trans &kp K_COPY &kp K_PASTE &kp K_UNDO &kp K_REDO &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
                 };
