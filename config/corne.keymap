@@ -20,21 +20,21 @@
         slash: slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp BSLH>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
-        comsqt: comma_apostrophe {
+        commqt: comma_quotation {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp AT>, <&kp SQT>;
+            bindings = <&kp COMMA>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
-        dotqt: dot_quotation {
+        dotapos: dot_apostrophe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COMMA>;
+            bindings = <&kp DOT>, <&kp SINGLE_QUOTE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
@@ -101,10 +101,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
-         tabec: tab_esc {
+         esctb: esc_tab {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp ESC>;
+            bindings = <&kp ESC>, <&kp TAB>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
@@ -137,35 +137,35 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | N/A | ,(')| .(")|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  |tabec| N/A |
+// | N/A | LWR |esctb|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
 // | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
 // | N/A |upies|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
-//                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
+//                    | CTRL | .(') | SPC |  |BK(DE)| ,(") | ENT |
                         bindings = <
-   &none &tog 2 &dotqt &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &tog 1 &none
+   &none &tog 2 &esctb &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &tog 1 &none
    &none &acop &opa &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
    &none &uppies &kp Q &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
-   &kp LCTRL &mo 1 &kp SPACE &backs &tog 2 &kp RET
+   &kp LCTRL &dotapos &kp SPACE &backs &commqt &kp RET
  
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | N/A | £($)|  #  |  &  |  ~  |  @  |      |  1  |  2  |  3  | +(-)|     | N/A |
-// | N/A | ESC |  ;  |  :  |  !  |  ?  |      |  4  |  5  |  6  | %(*)| <(>)| N/A |
-// | N/A |cmsqt| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  | =(^)| /(\)| N/A |
+// | N/A | LWR |  ~  |  -  |  &  |  @  |      |  1  |  2  |  3  | +(-)| RSE | N/A |
+// | N/A |  £  |  ;  |  :  |  !  |  ?  |      |  4  |  5  |  6  | %(*)| <(>)| N/A |
+// | N/A |upies| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  | =(^)| /(\)| N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
                         bindings = <
-   &trans &trans &kp AT &kp AMPS &kp PIPE &atpound &kp N1 &kp N2 &kp N3 &plusmin &trans &trans
-   &trans &comsqt &kp SINGLE_QUOTE &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
+   &trans &trans &kp PIPE &kp MINUS &kp AMPS &kp AT &kp N1 &kp N2 &kp N3 &plusmin &trans &trans
+   &trans &kp HASH &kp SEMI &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
    &trans &uppies &lines &brace &square &brackets &kp N7 &kp N8 &kp N9 &equalhat &slash  &trans
-   &trans &trans &trans &trans &trans &kp N0
+   &trans &trans &trans &trans &kp N0 &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | N/A |     |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | N/A |
+// | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE |
 // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  S⬆ |  S⬇ | FIND|  B+ |  B- | N/A |
 // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
