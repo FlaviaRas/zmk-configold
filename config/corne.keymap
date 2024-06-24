@@ -73,13 +73,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };  
 
-        atpound: at_pound {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp HASH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
-
         prcntastk: percent_asterisk {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -154,7 +147,7 @@
 // | N/A | LWR |  ~  |  -  |  &  |  @  |      |  1  |  2  |  3  | +(-)| RSE | N/A |
 // | N/A |  £  |  ;  |  :  |  !  |  ?  |      |  4  |  5  |  6  | %(*)| <(>)| N/A |
 // | N/A |upies| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  | =(^)| /(\)| N/A |
-//                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
+//                    | CTRL | LWR | SPC |  |BK(DE)|  0  | ENT |
                         bindings = <
    &trans &trans &kp PIPE &kp MINUS &kp AMPS &kp AT &kp N1 &kp N2 &kp N3 &plusmin &trans &trans
    &trans &kp HASH &kp SEMI &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
@@ -166,12 +159,12 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE |
-// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  S⬆ |  S⬇ | FIND|  B+ |  B- | N/A |
-// | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
+// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  |  | |  B+ |  B- | N/A |
+// | N/A |LC(C)|LC(V)|LC(Z)|LC(Y)|     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
                         bindings = <
    &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
-   &trans &tabec &kp LEFT &kp DOWN &kp RIGHT &trans  &kp C_AC_SCROLL_UP  &kp C_AC_SCROLL_DOWN &trans &kp C_BRI_UP &kp C_BRI_DN &trans
+   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &trans  &trans &trans &kp C_BRI_UP &kp C_BRI_DN &trans
    &trans &kp LC(C) &kp LC(V) &kp LC(Z) &kp LC(Y) &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
