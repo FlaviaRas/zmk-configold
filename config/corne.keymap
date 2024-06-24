@@ -122,7 +122,7 @@
 //                    | CTRL | .(') | SPC |  |BK(DE)| ,(") | ENT |
                         bindings = <
    &none &tog 2 &esctb &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &tog 1 &none
-   &none &acop &opa &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
+   &none &kp A &kp O &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
    &none &uppies &kp Q &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
    &kp LCTRL &dotapos &kp SPACE &backs &commqt &kp RET
  
