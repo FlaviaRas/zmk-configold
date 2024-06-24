@@ -159,12 +159,12 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE |
-// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      |  |  | |  B+ |  B- | N/A |
+// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | home |     |    |  B+ |  B- | N/A |
 // | N/A |LC(C)|LC(V)|LC(Z)|LC(Y)|     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)| RSE | ENT |
                         bindings = <
    &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
-   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &trans  &trans &trans &kp C_BRI_UP &kp C_BRI_DN &trans
+   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &kp HOME &trans &trans &kp C_BRI_UP &kp C_BRI_DN &trans
    &trans &kp LC(C) &kp LC(V) &kp LC(Z) &kp LC(Y) &trans   &trans &trans &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans
                         >;
