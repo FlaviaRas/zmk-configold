@@ -169,11 +169,11 @@
             bindings = <&capsword>, <&kp I)>;
         };
 
-       num_word: num_word {
-        #binding-cells = <0>;
-        compatible = "zmk,behavior-num-word";
-        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-        ignore-numbers;
+        num_word: num_word {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-num-word";
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-numbers;
         };
 
         dnum: tap_dance_d_num_word {
@@ -182,8 +182,6 @@
             tapping-term-ms = <200>;
             bindings = <&num_word>, <&kp D>;
         };
-
-    
     };
 
     keymap {
@@ -197,10 +195,10 @@
             //                    | CTRL | .(') |SPC(⬆)|  |BK(DE)| ,(") | ENT |
 
             bindings = <
-&none  &tog 2  &esctb  &kp P      &kp Y     &kp F                        &kp G   &kp C    &kp R    &kp L  &tog 1  &none
-&none  &kp A   &kp O   &kp E      &kp U     &kp I                        &kp D   &kp H    &kp T    &kp N  &kp S   &none
-&none  &coppy  &qur    &kp J      &kp K     &kp X                        &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                       &kp LCTRL  &dotapos  &spcshft                 &backs  &commqt  &kp RET
+&none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
+&none  &kp A   &kp O   &kp E      &kp U     &kp I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
+&none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
+                       &kp LCTRL  &dotapos  &spcshft LSHIFT SPACE    &backs  &commqt  &kp RET
             >;
         };
 
@@ -212,10 +210,10 @@
             //                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| 0(,)| ENT |
 
             bindings = <
-&trans  &trans  &fancyl  &money         &atmps          &exchsh          &kp N1  &kp N2    &kp N3  &equlpls    &trans  &trans
-&trans  &trans  &trans   &trans         &mt COLON SEMI  &qusthat         &kp N4  &kp N5    &kp N6  &prcntastk  &croc   &trans
-&trans  &trans  &lines   &mt LBRC RBRC  &mt LBKT RBKT   &mt LPAR RPAR    &kp N7  &kp N8    &kp N9  &trans      &slash  &trans
-                         &trans         &trans          &trans           &trans  &zerocom  &trans
+&trans  &trans  &fancyl  &money         &atmps          &exchsh          &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
+&trans  &trans  &trans   &trans         &mt COLON SEMI  &qusthat         &kp N4  &kp N5                         &kp N6  &prcntastk  &croc   &trans
+&trans  &trans  &lines   &mt LBRC RBRC  &mt LBKT RBKT   &mt LPAR RPAR    &kp N7  &kp N8                         &kp N9  &trans      &slash  &trans
+                         &trans         &trans          &trans           &trans  &zerocom KP_COMMA KP_NUMBER_0  &trans
             >;
         };
 
