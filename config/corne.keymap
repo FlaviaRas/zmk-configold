@@ -143,8 +143,18 @@
           tapping-term-ms = <200>;
           quick-tap-ms = <200>;
           require-prior-idle-ms = <125>;
-          bindings = <&kp N0>, <commqt>;
-};
+          bindings = <&kp N0>, <&commqt>;
+          };
+
+        spcshft: space_shift {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <200>;
+          require-prior-idle-ms = <125>;
+          bindings = <&kp SPACE>, <&kp LSHFT>;
+          };
         };
 
 
@@ -161,7 +171,7 @@
    &none &tog 2 &esctb &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &tog 1 &none
    &none &kp A &kp O &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
    &none &uppies &kp Q &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
-   &kp LCTRL &dotapos &kp SPACE &backs &commqt &kp RET
+   &kp LCTRL &dotapos &spcshft &backs &commqt &kp RET
  
                         >;
                 };
@@ -170,7 +180,7 @@
 // | N/A | LWR | -(~)| £($)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
 // | N/A |     |  ;  |  :  |     | ?(^)|      |  4  |  5  |  6  | %(*)| <(>)| N/A |
 // | N/A |upies| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     | /(\)| N/A |
-//                    | CTRL | LWR | SPC |  |BK(DE)|  0  | ENT |
+//                    | CTRL | LWR | SPC |  |BK(DE)| 0(,)| ENT |
                         bindings = <
    &trans &trans &fancyl &money &atmps &exchsh &kp N1 &kp N2 &kp N3 &equlpls &trans &trans
    &trans &trans &kp SEMI &kp COLON &trans &qusthat &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
