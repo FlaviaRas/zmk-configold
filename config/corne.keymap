@@ -139,13 +139,21 @@
             bindings = <&kp N0>, <&kp COMMA>;
         };
 
-        spcshft: space_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            bindings = <&kp LSHFT>, <&kp SPACE>;
+     td_space_ctrl: td_space_ctrl {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&kp SPACE>, <&kp LCTRL>;
+    };
+        spcshft: htd_kp_space_ctrl: htd_kp_space_ctrl {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        quick-tap-ms = <200>;
+        bindings = <&kp>, <&td_space_ctrl>;
+        hold-trigger-key-positions = <KB_THUMBS KB_RIGHT>;
+        retro-tap;
         };
 
         coppy: tap_dance_copy_paste {
@@ -198,7 +206,7 @@
 &none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
 &none  &kp A   &kp O   &kp E      &kp U     &icap                    &dnum   &kp H    &kp T    &kp N  &kp S   &none
 &none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                       &kp LCTRL  &dotapos  &spcshft LSHIFT SPACE    &backs  &commqt  &kp RET
+                       &kp LCTRL  &dotapos  &htd_kp_space_ctrl LSHIFT 0    &backs  &commqt  &kp RET
             >;
         };
 
