@@ -52,26 +52,26 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             }; 
 
-        brace: brace {
-            compatible = "zmk,behavior-mod-morph";
+        brace: tap_dance_brace {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp RBRC>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+            tapping-term-ms = <200>;
+            bindings = <&kp LBRC>, <&kp RBRC)>;
+          };
 
-        square: square_braket {
-            compatible = "zmk,behavior-mod-morph";
+        square: tap_dance_square {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+            tapping-term-ms = <200>;
+            bindings = <&kp LBKT>, <kp RBKT)>;
+          };
 
-        brackets: brackets {
-            compatible = "zmk,behavior-mod-morph";
+        brackets: tap_dance_brackets {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+            tapping-term-ms = <200>;
+            bindings = <&kp LPAR>, <kp RPAR)>;
+          };
 
         equlpls: equal_plus {
             compatible = "zmk,behavior-mod-morph";
@@ -169,6 +169,20 @@
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <kp LC(Z)>, <kp LC(Y)>;
           };
+
+        dotty: tap_dance_colon_semi {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COLON>, <kp SEMI)>;
+          };
+
+        qur: tap_dance_q_undo_redo {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <kp LC(Z)>, <kp LC(Y)>;
+          };
         };
 
 
@@ -192,12 +206,12 @@
                 lower_layer {
 // ---------------------https://github.com/FlaviaRas/zmk-configold/issues--------------------------------------------------------------------
 // | N/A | LWR | -(~)| £($)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
-// | N/A |     |  ;  |  :  |     | ?(^)|      |  4  |  5  |  6  | %(*)| <(>)| N/A |
-// | N/A |upies| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     | /(\)| N/A |
+// | N/A |     |     |     | :(;)| ?(^)|      |  4  |  5  |  6  | %(*)| <(>)| N/A |
+// | N/A |coppy| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     | /(\)| N/A |
 //                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| 0(,)| ENT |
                         bindings = <
    &trans &trans &fancyl &money &atmps &exchsh &kp N1 &kp N2 &kp N3 &equlpls &trans &trans
-   &trans &trans &kp SEMI &kp COLON &trans &qusthat &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
+   &trans &trans &trans &dotty &trans &qusthat &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
    &trans &trans &lines &brace &square &brackets &kp N7 &kp N8 &kp N9 &trans &slash  &trans
    &trans &trans &trans &trans &zerocom &trans
                         >;
