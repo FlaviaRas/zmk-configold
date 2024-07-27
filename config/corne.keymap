@@ -138,14 +138,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LC(C)>, <kp LC(V)>;
+            bindings = <&hm LC(C)>, <hm LC(V)>;
             };
 
         qur: tap_dance_q_undo_redo {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp Q>, <kp LC(Z)>, <kp LC(Y)>;
+            bindings = <&kp Q>, <hm LC(Z)>, <hm LC(Y)>;
           };
         };
 
