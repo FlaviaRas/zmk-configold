@@ -161,6 +161,12 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LC(C)>, <kp LC(V)>;
+ 
+        qur: tap_dance_q_undo_redo {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <kp LC(Z)>, <kp LC(Y)>;
           };
         };
 
@@ -177,7 +183,7 @@
                         bindings = <
    &none &tog 2 &esctb &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &tog 1 &none
    &none &kp A &kp O &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
-   &none &coppy &kp Q &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
+   &none &coppy &qur &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
    &kp LCTRL &dotapos &spcshft &backs &commqt &kp RET
  
                         >;
@@ -200,12 +206,12 @@
 // -----------------------------------------------------------------------------------------
 // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE |
 // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | home |     |    |  B+ |  B- | N/A |
-// | N/A |LC(C)|LC(V)|LC(Z)|LC(Y)|     |      |     |     |     |     |     | N/A |
+// | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
 //                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| RSE | ENT |
                         bindings = <
    &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
    &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &kp RWIN &trans &trans &kp C_BRI_UP &kp C_BRI_DN &trans
-   &trans &trans &trans &kp LC(Z) &kp LC(Y) &trans   &trans &trans &trans &trans &trans &trans 
+   &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans 
    &trans &trans &trans &trans &trans &trans
                         >;
                 };
