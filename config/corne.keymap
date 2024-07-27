@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 / {
     behaviors {
@@ -14,185 +13,202 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp GT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+        };
 
         slash: slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp FSLH>, <&kp NON_US_BACKSLASH>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+        };
 
         commqt: comma_quotation {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp AT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+        };
 
         dotapos: dot_apostrophe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp SINGLE_QUOTE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+        };
 
         lines: underscore_pipe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp PIPE2>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
+        };
 
         fancyl: minus_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp PIPE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            }; 
+        };
 
         equlpls: equal_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp PLUS>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            };  
+        };
 
         prcntastk: percent_asterisk {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PRCNT>, <&kp ASTRK>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
 
-         qusthat: question_caret {
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        qusthat: question_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp QMARK>, <&kp CARET>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
 
-         backs: back_del {
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        backs: back_del {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BKSP>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
 
-         esctb: esc_tab {
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        esctb: esc_tab {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp TAB>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };
 
-         uppies: shift_caps {
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        uppies: shift_caps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LSHFT>, <&kp CAPS>;
+
             mods = <(MOD_LCTL)>;
-            };  
-        
-         money: pound_dollar {
+        };
+
+        money: pound_dollar {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp POUND>, <&kp DOLLAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            };  
 
-         atmps: at_amps {
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        atmps: at_amps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp AT>, <&kp AMPS>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            }; 
 
-         exchsh: exclamation_hash {
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        exchsh: exclamation_hash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp EXCL>, <&kp BSLH>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            }; 
 
-         zerocom: zero_comma {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          flavor = "tap-preferred";
-          tapping-term-ms = <200>;
-          quick-tap-ms = <200>;
-          require-prior-idle-ms = <125>;
-          bindings = <&kp N0>, <&kp COMMA>;
-          };
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        zerocom: zero_comma {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp N0>, <&kp COMMA>;
+        };
 
         spcshft: space_shift {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          flavor = "tap-preferred";
-          tapping-term-ms = <200>;
-          quick-tap-ms = <0>;
-          bindings = <&kp LSHFT>, <&kp SPACE>;
-         };
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp LSHFT>, <&kp SPACE>;
+        };
 
         coppy: tap_dance_copy_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&hm LC(C)>, <hm LC(V)>;
-            };
+        };
 
         qur: tap_dance_q_undo_redo {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <hm LC(Z)>, <hm LC(Y)>;
-          };
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // | N/A | LWR |esctb|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
+            // | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
+            // | N/A |coppy|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
+            //                    | CTRL | .(') |SPC(⬆)|  |BK(DE)| ,(") | ENT |
+
+            bindings = <
+&none  &tog 2  &esctb  &kp P      &kp Y     &kp F                        &kp G   &kp C    &kp R    &kp L  &tog 1  &none
+&none  &kp A   &kp O   &kp E      &kp U     &kp I                        &kp D   &kp H    &kp T    &kp N  &kp S   &none
+&none  &coppy  &qur    &kp J      &kp K     &kp X                        &kp B   &kp M    &kp W    &kp V  &kp Z   &none
+                       &kp LCTRL  &dotapos  &spcshft LEFT_SHIFT SPACE    &backs  &commqt  &kp RET
+            >;
         };
 
+        lower_layer {
+            // ---------------------https://github.com/FlaviaRas/zmk-configold/issues--------------------------------------------------------------------
+            // | N/A | LWR | -(~)| £($)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
+            // | N/A |     |     |     | :(;)| ?(^)|      |  4  |  5  |  6  | %(*)| <(>)| N/A |
+            // | N/A |coppy| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     | /(\)| N/A |
+            //                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| 0(,)| ENT |
 
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// | N/A | LWR |esctb|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
-// | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
-// | N/A |coppy|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
-//                    | CTRL | .(') |SPC(⬆)|  |BK(DE)| ,(") | ENT |
-                        bindings = <
-   &none &tog 2 &esctb &kp P &kp Y &kp F &kp G &kp C  &kp R &kp L &tog 1 &none
-   &none &kp A &kp O &kp E &kp U &kp I &kp D &kp H  &kp T &kp N &kp S &none
-   &none &coppy &qur &kp J &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z &none
-   &kp LCTRL &dotapos &spcshft &backs &commqt &kp RET
- 
-                        >;
-                };
-                lower_layer {
-// ---------------------https://github.com/FlaviaRas/zmk-configold/issues--------------------------------------------------------------------
-// | N/A | LWR | -(~)| £($)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
-// | N/A |     |     |     | :(;)| ?(^)|      |  4  |  5  |  6  | %(*)| <(>)| N/A |
-// | N/A |coppy| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     | /(\)| N/A |
-//                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| 0(,)| ENT |
-                        bindings = <
-   &trans &trans &fancyl &money &atmps &exchsh &kp N1 &kp N2 &kp N3 &equlpls &trans &trans
-   &trans &trans &trans &trans &mt COLON SEMI &qusthat &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
-   &trans &trans &lines &mt LBRC RBRC &mt LBKT RBKT &mt LPAR RPAR &kp N7 &kp N8 &kp N9 &trans &slash  &trans
-   &trans &trans &trans &trans &zerocom &trans
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE |
-// | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | home |     |    |  B+ |  B- | N/A |
-// | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
-//                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| RSE | ENT |
-                        bindings = <
-   &trans &trans &trans &kp UP  &trans &trans   &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp PSCRN &trans &trans
-   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans  &kp RWIN &trans &trans &kp C_BRI_UP &kp C_BRI_DN &trans
-   &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans 
-   &trans &trans &trans &trans &trans &trans
-                        >;
-                };
+            bindings = <
+&trans  &trans  &fancyl  &money         &atmps          &exchsh          &kp N1  &kp N2    &kp N3  &equlpls    &trans  &trans
+&trans  &trans  &trans   &trans         &mt COLON SEMI  &qusthat         &kp N4  &kp N5    &kp N6  &prcntastk  &croc   &trans
+&trans  &trans  &lines   &mt LBRC RBRC  &mt LBKT RBKT   &mt LPAR RPAR    &kp N7  &kp N8    &kp N9  &trans      &slash  &trans
+                         &trans         &trans          &trans           &trans  &zerocom  &trans
+            >;
         };
+
+        raise_layer {
+            // -----------------------------------------------------------------------------------------
+            // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE |
+            // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | home |     |    |  B+ |  B- | N/A |
+            // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
+            //                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| RSE | ENT |
+
+            bindings = <
+&trans  &trans  &trans    &kp UP    &trans     &trans    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &kp PSCRN     &trans        &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &kp RWIN      &trans        &trans      &kp C_BRI_UP  &kp C_BRI_DN  &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans        &trans        &trans      &trans        &trans        &trans
+                          &trans    &trans     &trans    &trans        &trans
+            >;
+        };
+    };
 };
