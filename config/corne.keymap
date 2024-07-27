@@ -136,7 +136,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
-            bindings = <&kp N0>, <&kp COMMA>;
+            bindings = <&kp N0 &kp COMMA>;
         };
 
      td_space_ctrl: td_space_ctrl {
