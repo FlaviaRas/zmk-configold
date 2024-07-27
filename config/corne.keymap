@@ -87,10 +87,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
-         equalhat: equals_caret {
+         qusthat: question_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp CARET>;
+            bindings = <&kp QMARK>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             };
 
@@ -129,6 +129,22 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             }; 
 
+         exchsh: exclamation_hash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL>, <&kp BSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            }; 
+
+         zerocom: zero_comma {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <200>;
+          require-prior-idle-ms = <125>;
+          bindings = <&kp N0>, <commqt>;
+};
         };
 
 
@@ -150,16 +166,16 @@
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// | N/A | LWR | -(~)| £($)|  @&  |  @  |       |  1  |  2  |  3  | =(+)| RSE | N/A |
-// | N/A |     |  ;  |  :  |  !  |  ?  |      |  4  |  5  |  6  | %(*)| <(>)| N/A |
-// | N/A |upies| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  | (^)| /(\)| N/A |
+// ---------------------https://github.com/FlaviaRas/zmk-configold/issues--------------------------------------------------------------------
+// | N/A | LWR | -(~)| £($)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
+// | N/A |     |  ;  |  :  |     | ?(^)|      |  4  |  5  |  6  | %(*)| <(>)| N/A |
+// | N/A |upies| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     | /(\)| N/A |
 //                    | CTRL | LWR | SPC |  |BK(DE)|  0  | ENT |
                         bindings = <
-   &trans &trans &fancyl &money &atmps &trans &kp N1 &kp N2 &kp N3 &equlpls &trans &trans
-   &trans &kp HASH &kp SEMI &kp COLON &kp EXCL &kp QMARK &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
-   &trans &uppies &lines &brace &square &brackets &kp N7 &kp N8 &kp N9 &equalhat &slash  &trans
-   &trans &trans &trans &trans &kp N0 &trans
+   &trans &trans &fancyl &money &atmps &exchsh &kp N1 &kp N2 &kp N3 &equlpls &trans &trans
+   &trans &trans &kp SEMI &kp COLON &trans &qusthat &kp N4 &kp N5 &kp N6 &prcntastk &croc &trans
+   &trans &uppies &lines &brace &square &brackets &kp N7 &kp N8 &kp N9 &trans &slash  &trans
+   &trans &trans &trans &trans &zerocom &trans
                         >;
                 };
 
