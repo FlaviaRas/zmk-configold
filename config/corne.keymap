@@ -152,7 +152,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hm LC(C)>, <&hm LC(V)>;
+            bindings = <&kp LC(C)>, <&kp LC(V)>;
         };
 
         qur: tap_dance_q_undo_redo {
