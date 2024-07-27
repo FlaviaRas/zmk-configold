@@ -161,6 +161,29 @@
             tapping-term-ms = <200>;
             bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
         };
+
+        icap: tap_dance_i_caps_word {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&capsword>, <&kp I)>;
+        };
+
+       num_word: num_word {
+        #binding-cells = <0>;
+        compatible = "zmk,behavior-num-word";
+        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+        ignore-numbers;
+        };
+
+        dnum: tap_dance_d_num_word {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&num_word>, <&kp D>;
+        };
+
+    
     };
 
     keymap {
