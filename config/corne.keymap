@@ -52,16 +52,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             }; 
 
-td_mytd: tap_dance_my {
-        compatible = "zmk,behavior-tap-dance";
-        label = "brackets;
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings =
-        <&mt LSHFT SPACE>,
-        <&mo 2>;
-    };
-
         equlpls: equal_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
