@@ -170,19 +170,6 @@
             bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
         };
 
-        num_word: num_word {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-num-word";
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-            ignore-numbers;
-        };
-
-        dnum: tap_dance_d_num_word {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&num_word>, <&kp D>;
-        };
     };
 
     keymap {
@@ -197,7 +184,7 @@
 
             bindings = <
 &none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
-&none  &kp A   &kp O   &kp E      &kp U     &mt caps_word I                    &dnum   &kp H    &kp T    &kp N  &kp S   &none
+&none  &kp A   &kp O   &kp E      &kp U     &kp I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
 &none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
                        &kp LCTRL  &dotapos  &htd_kp_space_ctrl LSHIFT 0    &backs  &commqt  &kp RET
             >;
