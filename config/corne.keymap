@@ -170,7 +170,7 @@
             // | N/A | LWR |esctb|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
             // | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
             // | N/A |coppy|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
-            //                    | CTRL | .(') |SPC(⬆)|  |BK(DE)| ,(") | ENT |
+            //                  | CTRL | .(') |SPC(⬆)|  |BK(DE)| ,(") | ENT |
 
             bindings = <
 &none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
@@ -185,7 +185,7 @@
             // | N/A | LWR | -(~)| £($)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
             // | N/A |     |     |     | :(;)| ?(^)|      |  4  |  5  |  6  | %(*)| <(>)| N/A |
             // | N/A |coppy| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     | /(\)| N/A |
-            //                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| 0(,)| ENT |
+            //                  | CTRL | .(') |SPC(⬆)|  |BK(DE)| 0(,)| ENT |
 
             bindings = <
 &trans  &trans  &fancyl  &money         &atmps          &exchsh          &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
@@ -197,10 +197,10 @@
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE |
+            // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE | N/A |
             // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | home |     |    |  B+ |  B- | N/A |
             // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
-            //                    | CTRL | LWR |SPC(⬆)|  |BK(DE)| RSE | ENT |
+            //                  | CTRL | .(') |SPC(⬆)|  |BK(DE)| RSE | ENT |
 
             bindings = <
 &trans  &trans  &trans    &kp UP    &trans     &trans    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &kp PSCRN     &trans        &trans
