@@ -155,10 +155,10 @@
             //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
-&trans  &trans  &fancyl  &money         &atmps          &exchsh          &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
-&trans  &slash  &croc   &prcntastk         &mt SEMI COLON  &qusthat         &kp N4  &kp N5                         &kp N6  &trans  &trans   &trans
-&trans  &trans  &lines   &mt RBRC LBRC &mt RBKT LBKT   &mt RPAR LPAR    &kp N7  &kp N8                         &kp N9  &trans      &trans &trans
-                         &trans         &trans          &trans           &trans  &mt COMMA N0  &trans
+&trans  &trans  &fancyl   &money        &atmps          &exchsh                &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
+&trans  &slash  &croc    &prcntastk     &mt SEMI COLON  &qusthat               &kp N4  &kp N5                         &kp N6  &trans  &trans   &trans
+&trans  &trans  &lines   &mt RBRC LBRC  &mt RBKT LBKT   &mt RPAR LPAR          &kp N7  &kp N8                         &kp N9  &trans      &trans &trans
+                                          &trans    &trans     &trans      &trans  &mt COMMA N0  &trans
             >;
         };
 
@@ -172,7 +172,7 @@
             bindings = <
 &trans  &trans  &trans    &kp UP    &trans     &trans    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &kp PSCRN     &trans        &trans
 &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &kp RWIN      &trans        &trans      &kp C_BRI_UP  &kp C_BRI_DN  &trans
-&trans  &trans  &trans    &trans    &trans     &trans    &trans        &trans        &trans      &trans        &trans        &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans        &trans        &trans      &kp C_SLEEP       &trans        &trans
                           &trans    &trans     &trans    &trans        &trans &trans  
             >;
         };
