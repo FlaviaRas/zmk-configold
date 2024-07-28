@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors/num_word.dtsi>
 
 / {
     behaviors {
@@ -133,6 +134,20 @@
             tapping-term-ms = <200>;
             bindings = <&kp SPACE>, <&kp RET>;
         };
+      
+      num_word: num_word {
+        #binding-cells = <0>;
+        compatible = "zmk,behavior-num-word";
+        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL LPAR RPAR>;
+        ignore-numbers;
+  };
+      nummies: new_num_word {
+        #binding-cells = <0>;
+        compatible = "zmk,behavior-num-word";
+        layers = <1 2 3>;
+        continue-list = <BSPC EQUAL>;
+        ignore-numbers;
+    };
 
     };
 
@@ -150,7 +165,7 @@
 &none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
 &none  &kp A   &kp O   &kp E      &kp U     &kp I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
 &none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                            &kp RET &kp LSHIFT &innie         &backs  &mt SINGLE_QUOTE DOT  &mt COMMA AT
+                            &nummies &kp LSHIFT &innie         &backs  &mt SINGLE_QUOTE DOT  &mt COMMA AT
             >;
         };
 
