@@ -143,7 +143,7 @@
 &none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
 &none  &kp A   &kp O   &kp E      &kp U     &kp I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
 &none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                       &kp RET  &mt DOT SINGLE_QUOTE  &kp SPACE              &backs  &mt AT COMMA   &kp LSHIFT
+                       &kp RET  &mt SINGILE_QUOTE DOT &kp SPACE              &backs  &mt COMMA AT   &kp LSHIFT
             >;
         };
 
