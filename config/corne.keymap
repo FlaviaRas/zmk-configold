@@ -127,6 +127,13 @@
             bindings = <&kp Q>, <&kp LC(Z)>, <&kp LC(Y)>;
         };
 
+         innie: tap_dance_space_enter {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SPACE>, <&kp RET>;
+        };
+
     };
 
     keymap {
@@ -137,13 +144,13 @@
             // | N/A | LWR |esctb|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
             // | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
             // | N/A |coppy|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
-            //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
+            //                    | ENT |  ⬆  | __(↵)|  |BK(DE)| .(') | ,(") |
 
             bindings = <
 &none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
 &none  &kp A   &kp O   &kp E      &kp U     &kp I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
 &none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                       &kp RET  &mt SINGLE_QUOTE DOT  &mt LSHIFT SPACE              &backs  &mt COMMA AT   &mt LSHIFT RET
+                            &kp RET &kp LSHIFT &innie         &backs  &mt SINGLE_QUOTE DOT  &mt COMMA AT
             >;
         };
 
