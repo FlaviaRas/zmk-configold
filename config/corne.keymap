@@ -144,7 +144,7 @@
       nummies: new_num_word {
         #binding-cells = <0>;
         compatible = "zmk,behavior-num-word";
-        layers = <(1 2)>;
+        layers = <(1)>;
         continue-list = <BSPC EQUAL>;
         ignore-numbers;
     };
