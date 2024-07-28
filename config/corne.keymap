@@ -25,22 +25,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        commqt: comma_quotation {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp AT>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        dotapos: dot_apostrophe {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp SINGLE_QUOTE>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         lines: underscore_pipe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -129,23 +113,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-     td_space_ctrl: td_space_ctrl {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp SPACE>, <&kp LCTRL>;
-    };
-        spcshft: htd_kp_space_ctrl: htd_kp_space_ctrl {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
-        bindings = <&kp>, <&td_space_ctrl>;
-        hold-trigger-key-positions = <39>;
-        retro-tap;
-        };
-
         coppy: tap_dance_copy_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -170,13 +137,13 @@
             // | N/A | LWR |esctb|  P  |  Y  |  F  |      |  G  |  C  |  R  |  L  | RSE | N/A |
             // | N/A |  A  |  O  |  E  |  U  |  I  |      |  D  |  H  |  T  |  N  |  S  | N/A |
             // | N/A |coppy|  Q  |  J  |  K  |  X  |      |  B  |  M  |  W  |  V  |  Z  | N/A |
-            //                  | CTRL | .(') |SPC(⬆)|  |BK(DE)| ,(") | ENT |
+            //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
 &none  &tog 2  &esctb  &kp P      &kp Y     &kp F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
 &none  &kp A   &kp O   &kp E      &kp U     &kp I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
 &none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                       &kp LCTRL  &dotapos  &htd_kp_space_ctrl LSHIFT 0   &backs  &commqt  &kp RET
+                       &kp RET  &mt DOT SINGLE_QUOTE  &kp SPACE              &backs  &mt AT COMMA   &kp LSHIFT
             >;
         };
 
@@ -185,7 +152,7 @@
             // | N/A | LWR | -(~)| £($)| @(&)| !(#)|      |  1  |  2  |  3  | =(+)| RSE | N/A |
             // | N/A | /(\)| <(>)| %(*)| :(;)| ?(^)|      |  4  |  5  |  6  |     |     | N/A |
             // | N/A |coppy| _(|)| {(})| [(])| (())|      |  7  |  8  |  9  |     |     | N/A |
-            //                  | CTRL | .(') |SPC(⬆)|  |BK(DE)| 0(,)| ENT |
+            //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
 &trans  &trans  &fancyl  &money         &atmps          &exchsh          &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
@@ -200,7 +167,7 @@
             // | N/A | LWR |     |  ⬆  |     |     |      |  V+ |  V- |  Vx |PSCN | RSE | N/A |
             // | N/A |     |  ⬅ |  ⬇  |  ⮕ |     |      | home |     |    |  B+ |  B- | N/A |
             // | N/A |     |     |     |     |     |      |     |     |     |     |     | N/A |
-            //                  | CTRL | .(') |SPC(⬆)|  |BK(DE)| RSE | ENT |
+            //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
 &trans  &trans  &trans    &kp UP    &trans     &trans    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &kp PSCRN     &trans        &trans
