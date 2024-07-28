@@ -116,7 +116,7 @@
         atmps: at_amps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp AT>, <&kp AMPS>;
+            bindings = <&kp DQT>, <&kp AMPS>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -189,8 +189,8 @@
 
             bindings = <
 &trans  &trans  &fancyl  &money         &atmps          &exchsh          &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
-&trans  &trans  &trans   &trans         &mt COLON SEMI  &qusthat         &kp N4  &kp N5                         &kp N6  &prcntastk  &croc   &trans
-&trans  &trans  &lines   &mt LBRC RBRC  &mt LBKT RBKT   &mt LPAR RPAR    &kp N7  &kp N8                         &kp N9  &trans      &slash  &trans
+&trans  &trans  &trans   &trans         &mt SEMI COLON  &qusthat         &kp N4  &kp N5                         &kp N6  &prcntastk  &croc   &trans
+&trans  &trans  &lines   &mt RBRC LBRC &mt RBKT LBKT   &mt RPAR LPAR    &kp N7  &kp N8                         &kp N9  &trans      &slash  &trans
                          &trans         &trans          &trans           &trans  &mt COMMA N0  &trans
             >;
         };
