@@ -8,8 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <behaviors/num_word.dtsi>
 
-&mt {
-              tapping-term-ms = <300>;
+
 / {
     behaviors {
         
