@@ -151,6 +151,16 @@
         layers = <(1)>;
         continue-list = <BSPC EQUAL>;
         ignore-numbers;
+
+      retr: positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "retro-tap";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;
+            bindings = <&kp LSHIFT>, <&kp SPACE>;
+            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+        };
     };
 
     };
@@ -169,7 +179,7 @@
 &none  &tog 2  &esctb  &mt MINUS P  &mt DQT Y  &mt EXCL F                    &kp G   &kp C    &kp R    &kp L  &tog 1  &none
 &none  &kp A   &kp O   &kp E      &kp U     &mt QMARK I                    &kp D   &kp H    &kp T    &kp N  &kp S   &none
 &none  &coppy  &qur    &kp J      &kp K     &kp X                    &kp B   &kp M    &kp W    &kp V  &kp Z   &none
-                     &backs &mt SINGLE_QUOTE DOT &kp SPACE      &kp LSHFT  &mt AT COMMA &kp RET 
+                     &kp LSHIFT &mt SINGLE_QUOTE DOT &retr      &kp backs  &mt AT COMMA &kp RET 
             >;
         };
 
