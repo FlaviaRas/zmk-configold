@@ -181,8 +181,8 @@
             //                   | ENT | .(') |SPACE |  |BK(DE)| ,(") |  ⬆  |
 
             bindings = <
-&trans  &trans  &money   &fancyl        &atmps          &exchsh                &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
-&trans  &slash  &croc    &prcntastk     &mt SEMI COLON  &qusthat               &kp N4  &kp N5                         &kp N6  &trans  &trans   &trans
+&trans  &trans  &trans   &fancyl        &atmps          &exchsh                &kp N1  &kp N2                         &kp N3  &equlpls    &trans  &trans
+&trans  &slash  &croc    &money     &mt SEMI COLON  &qusthat               &kp N4  &kp N5                         &kp N6  &prcntastk  &trans   &trans
 &trans  &trans  &lines   &mt RBRC LBRC  &mt RBKT LBKT   &mt RPAR LPAR          &kp N7  &kp N8                         &kp N9  &trans      &trans &trans
                                           &trans    &trans     &trans      &trans  &mt COMMA N0  &trans
             >;
